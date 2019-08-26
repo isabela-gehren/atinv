@@ -1,0 +1,8 @@
+#Ignored folders
+bin
+obj
+config
+.vs
+
+#Ignored file types
+*.cache
