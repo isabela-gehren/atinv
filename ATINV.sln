@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATINV.Model", "ATINV.Model\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATINV.Repository", "ATINV.Repository\ATINV.Repository.csproj", "{56AE7DE4-36B4-4FAE-9298-E24AB8322C1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATINV.Business", "ATINV.Business\ATINV.Business.csproj", "{C5A582E7-0E0A-43E3-AC6D-4C7DF58E5263}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATINV.Business", "ATINV.Business\ATINV.Business.csproj", "{C5A582E7-0E0A-43E3-AC6D-4C7DF58E5263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATINV.ViewModel", "ATINV.ViewModel\ATINV.ViewModel.csproj", "{FFA458C2-0E71-4930-A28B-39519F593997}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C5A582E7-0E0A-43E3-AC6D-4C7DF58E5263}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5A582E7-0E0A-43E3-AC6D-4C7DF58E5263}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5A582E7-0E0A-43E3-AC6D-4C7DF58E5263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA458C2-0E71-4930-A28B-39519F593997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA458C2-0E71-4930-A28B-39519F593997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA458C2-0E71-4930-A28B-39519F593997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA458C2-0E71-4930-A28B-39519F593997}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

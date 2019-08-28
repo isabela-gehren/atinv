@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using ATINV.Business;
 using ATINV.Model;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
+using ATINV.ViewModel;
 
 namespace ATINV.Web.Controllers
 {
@@ -9,16 +13,25 @@ namespace ATINV.Web.Controllers
     [ApiController]
     public class FundsController : ControllerBase
     {
+        private IMapper Mapper { get; set; }
         private IFundBusiness FundBusiness { get; set; }
-        public FundsController(IFundBusiness fundBusiness)
+
+        public FundsController(IMapper mapper, IFundBusiness fundBusiness)
         {
-            this.FundBusiness = fundBusiness;
+            this.Mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            this.FundBusiness = fundBusiness ?? throw new ArgumentNullException(nameof(fundBusiness));
         }
-        
+
         [HttpGet]
         public ActionResult<IList<Fund>> Get()
         {
-            return Ok(FundBusiness.List());
+            var fundViewModelList = new List<FundViewModel>();
+            FundBusiness.List().ToList().ForEach(i =>
+            {
+                fundViewModelList.Add(Mapper.Map<FundViewModel>(i));
+            });
+
+            return Ok(fundViewModelList);
         }
     }
 }
