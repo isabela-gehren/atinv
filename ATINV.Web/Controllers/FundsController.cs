@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using ATINV.Business;
+using ATINV.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ATINV.Web.Controllers
@@ -7,11 +9,16 @@ namespace ATINV.Web.Controllers
     [ApiController]
     public class FundsController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private IFundBusiness FundBusiness { get; set; }
+        public FundsController(IFundBusiness fundBusiness)
         {
-            return new string[] { "value1", "value2" };
+            this.FundBusiness = fundBusiness;
         }
-
+        
+        [HttpGet]
+        public ActionResult<IList<Fund>> Get()
+        {
+            return Ok(FundBusiness.List());
+        }
     }
 }

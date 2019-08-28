@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ATINV.Model\ATINV.Model.csproj" />
+    <ProjectReference Include="..\ATINV.Repository\ATINV.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace ATINV.Repository
 {
-    public abstract class GenericRepository<T> : IGenericRepository<T> where T : Base 
+    public abstract class GenericRepository<T> : IGenericRepository<T> where T : Base
     {
         protected DbContext _context;
         protected DbSet<T> _dbset;
@@ -34,14 +34,15 @@ namespace ATINV.Repository
             return (T)query;
         }
 
-        public IEnumerable<T> List()
+        public IList<T> List()
         {
             return _dbset.ToListAsync().Result;
         }
 
         public T Save(T obj)
         {
-            return _dbset.Update(obj).Entity;
+            obj = _dbset.Update(obj).Entity;
+            return obj;
         }
     }
 }

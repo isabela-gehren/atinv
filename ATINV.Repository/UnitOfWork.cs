@@ -3,26 +3,19 @@ using System;
 
 namespace ATINV.Repository
 {
-    public sealed class UnitOfWork : IUnitOfWork, IDisposable
+    public sealed class UnitOfWork : IUnitOfWork
     {
         private DbContext _dbContext;
 
-        public UnitOfWork()
+        public UnitOfWork(DbContext context)
         {
-            _dbContext = new AppDbContext(null);
+            _dbContext = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public int Commit()
         {
             //Save changes with the default options
             return _dbContext.SaveChanges();
-        }
-
-        public DbContext ReCreateContext()
-        {
-            _dbContext.Dispose();
-            _dbContext = new AppDbContext(null);
-            return _dbContext;
         }
 
         public void Dispose()
