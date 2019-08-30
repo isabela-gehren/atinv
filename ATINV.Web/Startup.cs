@@ -26,6 +26,7 @@ namespace ATINV.Web
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new FundProfile());
+                mc.AddProfile(new MovimentProfile());
             });
 
             IMapper mapper = mappingConfig.CreateMapper();

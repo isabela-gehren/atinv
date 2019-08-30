@@ -6,12 +6,13 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using ATINV.ViewModel;
+using ATINV.Utils;
 
 namespace ATINV.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FundsController : ControllerBase
+    public class FundsController : ApiBase
     {
         private IMapper Mapper { get; set; }
         private IFundBusiness FundBusiness { get; set; }
@@ -26,12 +27,17 @@ namespace ATINV.Web.Controllers
         public ActionResult<IList<Fund>> Get()
         {
             var fundViewModelList = new List<FundViewModel>();
-            FundBusiness.List().ToList().ForEach(i =>
+            var fundList = FundBusiness.List();
+            fundList.Entity.ForEach(i =>
             {
                 fundViewModelList.Add(Mapper.Map<FundViewModel>(i));
             });
 
-            return Ok(fundViewModelList);
+            return base.Message(new Response<List<FundViewModel>>(fundViewModelList)
+            {
+                Messages = fundList.Messages,
+                StatusCode = fundList.StatusCode
+            });
         }
     }
 }

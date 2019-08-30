@@ -1,10 +1,11 @@
 ﻿using ATINV.Model;
+using ATINV.Utils;
 using System.Collections.Generic;
 
 namespace ATINV.Business
 {
     public interface IFundBusiness
     {
-        IList<Fund> List();
+        Response<List<Fund>> List();
     }
 }

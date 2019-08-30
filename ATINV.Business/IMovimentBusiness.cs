@@ -1,9 +1,10 @@
 ﻿using ATINV.Model;
+using ATINV.Utils;
 
 namespace ATINV.Business
 {
     public interface IMovimentBusiness
     {
-        Moviment Save(Moviment obj);
+        Response<Moviment> Save(Moviment obj);
     }
 }

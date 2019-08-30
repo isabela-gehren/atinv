@@ -1,7 +1,9 @@
 ﻿using ATINV.Model;
 using ATINV.Repository;
+using ATINV.Utils;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ATINV.Business
 {
@@ -13,9 +15,9 @@ namespace ATINV.Business
             this.Repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
-        public IList<Fund> List()
+        public Response<List<Fund>> List()
         {
-            return Repository.List();
+            return new Response<List<Fund>>(Repository.List().ToList());
         }
     }
 }
