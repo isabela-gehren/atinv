@@ -9,15 +9,22 @@ namespace ATINV.Business
 {
     public class FundBusiness : IFundBusiness
     {
+        private IUnitOfWork Uow { get; set; }
         private IFundRepository Repository { get; set; }
-        public FundBusiness(IFundRepository repository)
+        public FundBusiness(IUnitOfWork uow, IFundRepository repository)
         {
+            this.Uow = uow ?? throw new ArgumentNullException(nameof(uow));
             this.Repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
         public Response<List<Fund>> List()
         {
-            return new Response<List<Fund>>(Repository.List().ToList());
+            IList<Fund> fundList;
+            using (Uow)
+            {
+                fundList = Repository.List();
+            }
+            return new Response<List<Fund>>(fundList.ToList());
         }
     }
 }

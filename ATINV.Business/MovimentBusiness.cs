@@ -25,7 +25,7 @@ namespace ATINV.Business
                 var msgs = ValidateMoviment(obj);
                 if(msgs.Count > 0)
                 {
-                    response.StatusCode = StatusCode.InternalServerError;
+                    response.StatusCode = StatusCode.BadRequest;
                     response.Messages = msgs;
                     return response;
                 }
@@ -51,12 +51,12 @@ namespace ATINV.Business
                 validationMsgs.Add("É necessário informar um fundo para aplicação/resgate");
             if (string.IsNullOrWhiteSpace(obj.Cpf))
                 validationMsgs.Add("É necessário informar o CPF para aplicação/resgate");
-            if (obj.Date == null)
+            if (obj.Date == DateTime.MinValue)
                 validationMsgs.Add("É necessário informar a data para aplicação/resgate");
             if (obj.Amount <= default(decimal))
                 validationMsgs.Add("É necessário informar o valor para aplicação/resgate");
             if (!string.IsNullOrWhiteSpace(obj.Cpf) && !Validators.CpfIsValid(obj.Cpf))
-                validationMsgs.Add("É necessário informar um CPF válido.");
+                validationMsgs.Add("É necessário informar um CPF válido");
 
             return validationMsgs;
         }

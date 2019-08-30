@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATINV.Business", "ATINV.Bus
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATINV.ViewModel", "ATINV.ViewModel\ATINV.ViewModel.csproj", "{FFA458C2-0E71-4930-A28B-39519F593997}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATINV.Utils", "ATINV.Utils\ATINV.Utils.csproj", "{66F33397-BC68-4A4D-AE1F-00C0E3136C4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATINV.Utils", "ATINV.Utils\ATINV.Utils.csproj", "{66F33397-BC68-4A4D-AE1F-00C0E3136C4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATINV.Tests", "ATINV.Tests\ATINV.Tests.csproj", "{C7F5296A-5577-40EB-8712-D0D0062E8310}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{66F33397-BC68-4A4D-AE1F-00C0E3136C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66F33397-BC68-4A4D-AE1F-00C0E3136C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66F33397-BC68-4A4D-AE1F-00C0E3136C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F5296A-5577-40EB-8712-D0D0062E8310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F5296A-5577-40EB-8712-D0D0062E8310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F5296A-5577-40EB-8712-D0D0062E8310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F5296A-5577-40EB-8712-D0D0062E8310}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
