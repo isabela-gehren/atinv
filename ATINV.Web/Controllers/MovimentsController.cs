@@ -9,6 +9,9 @@ using System;
 
 namespace ATINV.Web.Controllers
 {
+    /// <summary>
+    /// Endpoint responsible for treating moviment requests.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class MovimentsController : ApiBase
@@ -21,6 +24,11 @@ namespace ATINV.Web.Controllers
             this.Business = business ?? throw new ArgumentNullException(nameof(business));
         }
 
+        /// <summary>
+        /// Saves a moviment.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult<string> Save([FromBody]MovimentViewModel obj)
         {

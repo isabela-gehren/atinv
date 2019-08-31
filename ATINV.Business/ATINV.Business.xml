@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATINV.Business</name>
+    </assembly>
+    <members>
+        <member name="T:ATINV.Business.FundBusiness">
+            <summary>
+            The class that manipulates Fund objects, implementing IFundBusines interface.
+            </summary>
+        </member>
+        <member name="M:ATINV.Business.FundBusiness.#ctor(ATINV.Repository.IUnitOfWork,ATINV.Repository.IFundRepository)">
+            <summary>
+            The class constructor.
+            </summary>
+            <param name="uow"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:ATINV.Business.FundBusiness.List">
+            <summary>
+            Lists all Fund objects.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ATINV.Business.IFundBusiness">
+            <summary>
+            The interface describing Fund Services.
+            </summary>
+        </member>
+        <member name="M:ATINV.Business.IFundBusiness.List">
+            <summary>
+            Returns an object containing the code response for the request 
+            and the list of Funds, if the request were successful,
+            or a list of messages describing a problem, if failed.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ATINV.Business.IMovimentBusiness">
+            <summary>
+            The interface describing Moviment Services.
+            </summary>
+        </member>
+        <member name="M:ATINV.Business.IMovimentBusiness.Save(ATINV.Model.Moviment)">
+            <summary>
+            Saves a Moviment object and returns an object containing the code response for the request
+            and the saved object, if the request were successful,
+            or a list of messages describing a problem, if failed.
+            </summary>
+            <param name="obj">Moviment object.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ATINV.Business.MovimentBusiness">
+            <summary>
+            The class that manipulates Moviment objects.
+            </summary>
+        </member>
+        <member name="M:ATINV.Business.MovimentBusiness.#ctor(ATINV.Repository.IUnitOfWork,ATINV.Repository.IMovimentRepository)">
+            <summary>
+            The class constructor.
+            </summary>
+            <param name="uow"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:ATINV.Business.MovimentBusiness.Save(ATINV.Model.Moviment)">
+            <summary>
+            Validates and, if successful, saves a Moviment object.
+            </summary>
+            <param name="obj">Moviment object, representing a redemption or application moviment.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATINV.Utils</name>
+    </assembly>
+    <members>
+        <member name="T:ATINV.Utils.Response`1">
+            <summary>
+            Class responsible for encapsulating message exchange through the application.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ATINV.Utils.Response`1.StatusCode">
+            <summary>
+            The status code. 
+            </summary>
+        </member>
+        <member name="P:ATINV.Utils.Response`1.Messages">
+            <summary>
+            The list of messages, if the request failed.
+            </summary>
+        </member>
+        <member name="P:ATINV.Utils.Response`1.Entity">
+            <summary>
+            The manipulated object, if sucessful.
+            </summary>
+        </member>
+    </members>
+</doc>

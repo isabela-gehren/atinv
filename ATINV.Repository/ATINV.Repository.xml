@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATINV.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:ATINV.Repository.FundRepository">
+            <summary>
+            The especialized repository for Fund operations.
+            </summary>
+        </member>
+        <member name="T:ATINV.Repository.GenericRepository`1">
+            <summary>
+            The generic repository implementation of the IGenericRepository interface, 
+            serving the default operations: List, Get, Delete and Save.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ATINV.Repository.GenericRepository`1.#ctor(ATINV.Repository.IUnitOfWork)">
+            <summary>
+            The class constructor.
+            </summary>
+            <param name="unit"></param>
+        </member>
+        <member name="M:ATINV.Repository.GenericRepository`1.Delete(System.Guid)">
+            <summary>
+            Delete a specific object of T type, by id.
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ATINV.Repository.GenericRepository`1.Get(System.Guid)">
+            <summary>
+            Get a specific object of T type, by id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ATINV.Repository.GenericRepository`1.List">
+            <summary>
+            Lists all the objects of T type.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ATINV.Repository.GenericRepository`1.Save(`0)">
+            <summary>
+            Save a object of T type, updating it if id is passed, or creating a new one if not.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ATINV.Repository.IGenericRepository`1">
+            <summary>
+            Describes a generic repository, representing the default operations: List, Get, Delete and Save.
+            </summary>
+            <typeparam name="T">Any object in the database</typeparam>
+        </member>
+        <member name="M:ATINV.Repository.IGenericRepository`1.List">
+            <summary>
+            Lists all the objects of T type.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ATINV.Repository.IGenericRepository`1.Get(System.Guid)">
+            <summary>
+            Get a specific object of T type, by id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ATINV.Repository.IGenericRepository`1.Delete(System.Guid)">
+            <summary>
+            Delete a specific object of T type, by id.
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:ATINV.Repository.IGenericRepository`1.Save(`0)">
+            <summary>
+            Save a object of T type, updating it if id is passed, or creating a new one if not.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ATINV.Repository.MovimentRepository">
+            <summary>
+            The especialized repository for Moviment operations.
+            </summary>
+        </member>
+    </members>
+</doc>

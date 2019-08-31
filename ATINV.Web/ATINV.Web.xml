@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATINV.Web</name>
+    </assembly>
+    <members>
+        <member name="T:ATINV.Web.Controllers.FundsController">
+            <summary>
+            Endpoint responsible for treating fund requests.
+            </summary>
+        </member>
+        <member name="M:ATINV.Web.Controllers.FundsController.Get">
+            <summary>
+            Gets all Fund objects.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ATINV.Web.Controllers.MovimentsController">
+            <summary>
+            Endpoint responsible for treating moviment requests.
+            </summary>
+        </member>
+        <member name="M:ATINV.Web.Controllers.MovimentsController.Save(ATINV.ViewModel.MovimentViewModel)">
+            <summary>
+            Saves a moviment.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

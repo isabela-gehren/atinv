@@ -6,17 +6,30 @@ using System.Collections.Generic;
 
 namespace ATINV.Business
 {
+    /// <summary>
+    /// The class that manipulates Moviment objects.
+    /// </summary>
     public class MovimentBusiness : IMovimentBusiness
     {
         private IUnitOfWork Uow { get; set; }
         private IMovimentRepository Repository { get; set; }
 
+        /// <summary>
+        /// The class constructor.
+        /// </summary>
+        /// <param name="uow"></param>
+        /// <param name="repository"></param>
         public MovimentBusiness(IUnitOfWork uow, IMovimentRepository repository)
         {
             this.Uow = uow ?? throw new ArgumentNullException(nameof(uow));
             this.Repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
+        /// <summary>
+        /// Validates and, if successful, saves a Moviment object.
+        /// </summary>
+        /// <param name="obj">Moviment object, representing a redemption or application moviment.</param>
+        /// <returns></returns>
         public Response<Moviment> Save(Moviment obj)
         {
             Response<Moviment> response = new Response<Moviment>();

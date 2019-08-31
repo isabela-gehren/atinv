@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATINV.Model</name>
+    </assembly>
+    <members>
+        <member name="P:ATINV.Model.Fund.Name">
+            <summary>
+            The Fund´s name
+            </summary>
+        </member>
+        <member name="P:ATINV.Model.Fund.Cnpj">
+            <summary>
+            The Fund´s CNPJ
+            </summary>
+        </member>
+        <member name="P:ATINV.Model.Fund.MinInicialContribution">
+            <summary>
+            The minimal inicial contribution to the fund
+            </summary>
+        </member>
+        <member name="T:ATINV.Model.Moviment">
+            <summary>
+            The moviment object
+            </summary>
+        </member>
+        <member name="P:ATINV.Model.Moviment.FundId">
+            <summary>
+            The fundId in which the moviment will be done
+            </summary>
+        </member>
+        <member name="P:ATINV.Model.Moviment.Fund">
+            <summary>
+            The fund in which the moviment will be done
+            </summary>
+        </member>
+        <member name="P:ATINV.Model.Moviment.Cpf">
+            <summary>
+            The client´s document
+            </summary>
+        </member>
+        <member name="P:ATINV.Model.Moviment.Amount">
+            <summary>
+            The amount being movimenting
+            </summary>
+        </member>
+        <member name="P:ATINV.Model.Moviment.Date">
+            <summary>
+            The date of the moviment
+            </summary>
+        </member>
+        <member name="P:ATINV.Model.Moviment.MovimentType">
+            <summary>
+            The moviment type: Application or Redemption
+            </summary>
+        </member>
+    </members>
+</doc>

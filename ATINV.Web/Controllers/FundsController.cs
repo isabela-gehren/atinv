@@ -10,6 +10,9 @@ using ATINV.Utils;
 
 namespace ATINV.Web.Controllers
 {
+    /// <summary>
+    /// Endpoint responsible for treating fund requests.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class FundsController : ApiBase
@@ -23,6 +26,10 @@ namespace ATINV.Web.Controllers
             this.FundBusiness = fundBusiness ?? throw new ArgumentNullException(nameof(fundBusiness));
         }
 
+        /// <summary>
+        /// Gets all Fund objects.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult<IList<Fund>> Get()
         {
